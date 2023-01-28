@@ -39,5 +39,34 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-console.log(playRound(getPlayerChoice(), getComputerChoice()))
+function playMatch(){
+    let playerScore = 0;
+    let computerScore = 0;
+    let topScore = 0;
+
+    while(topScore < 3){
+
+        let resultado = playRound(getPlayerChoice(), getComputerChoice());
+
+        if (resultado.includes("Ganaste")){
+            playerScore++
+        } else if (resultado.includes("Perdiste")){
+            computerScore++
+        }
+        if (playerScore > computerScore){
+            topScore = playerScore
+        } else {
+            topScore = computerScore
+        }
+
+        console.log(`${resultado}
+        Tu: ${playerScore}. El computador: ${computerScore}`) 
+    } 
+
+    if(playerScore > computerScore){
+        console.log("Felicidades!! Ganaste la partida!!")
+    } else {console.log("Mala suerte, perdiste la partida.")}
+}
+
+playMatch()
 
