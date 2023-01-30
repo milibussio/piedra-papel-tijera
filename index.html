@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="icon" href="images/wink.ico">
     <title>Piedra, papel o tijera</title>
 </head>
@@ -18,29 +18,31 @@
     
     <div class ="contenido">
 
-        <h2>Elige con cuidado, gana el mejor de cinco.</h2>
+        <h2 id="frase">Elige con cuidado, gana el primero que gane cinco</h2>
 
         <div class ="resultados">
             <div class ="card">
-                <h3>Tú: 0</h3>
-                <img src="images/gris.jpeg" alt="tu elección">
+                <h3>Tú</h3>
+                <img id="tuEleccion" src="images/gris.jpeg" alt="tu elección">
+                <h1 id="ptjeJugador">0</h1>
             </div>
             <div class ="card">
-                <h3>La máquina: 0</h3>
-                <img src="images/gris.jpeg" alt="la elección de la máquina">
+                <h3>La máquina</h3>
+                <img id="suEleccion" src="images/gris.jpeg" alt="la elección de la máquina">
+                <h1 id="ptjePC">0</h1>
             </div>
         </div>
 
         <div class ="elecciones">
-            <img src="images/piedra.png" alt="piedra">
-            <img src="images/papel.png" alt="papel">
-            <img src="images/tijera.png" alt="tijera">
+            <img id="piedra" src="images/piedra.png" alt="piedra">
+            <img id="papel" src="images/papel.png" alt="papel">
+            <img id="tijera" src="images/tijera.png" alt="tijera">
         </div>
         
     </div>
     
     <div class ="footer">
-        <h4>&spades; &diams; Gracias por jugar &diams; &spades;</h4>
+        <h4>Gracias por jugar &spades;</h4>
     </div>
 
 </body>
